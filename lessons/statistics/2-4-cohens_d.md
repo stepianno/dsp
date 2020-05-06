@@ -15,9 +15,13 @@ import thinkstats2
 import thinkplot
 
 preg = nsfg.ReadFemPreg()
+
 live = preg[preg.outcome == 1]
+
 firsts = live[live.birthord == 1]
+
 others = live[live.birthord != 1]
+
 def CohenEffectSize(group1, group2):
     """Computes Cohen's effect size for two groups.
     
@@ -43,11 +47,17 @@ firsts.totalwgt_lb.mean() < others.totalwgt_lb.mean() # True
 Next, I make a histogram to compare the counts of birth sizes between first births and all others. I use the totalwgt_lb variable, but as the data has too much variance and looks unclear, I multiply each figure by two and use the np.floor function to group babies within half a pound (thus doubling the number of bars from using brtwgt_lb)
 
 first_hist = thinkstats2.Hist(np.floor(firsts.totalwgt_lb*2), label='first')
+
 other_hist = thinkstats2.Hist(np.floor(others.totalwgt_lb*2), label='other')
+
 width = 0.4
+
 thinkplot.PrePlot(2)
+
 thinkplot.Hist(first_hist, align='right', width=width)
+
 thinkplot.Hist(other_hist, align='left', width=width)
+
 thinkplot.Config(xlabel='lbs*2', ylabel='Count')
 
 It does appear that, on average, first births are smaller than others as the distribution leans a bit left.
