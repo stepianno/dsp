@@ -91,7 +91,7 @@ C = Twins
 P(A) = 1/300;    
 P(B) = 1/125;  
 P(C) = P(A) + P(B)  
-P(C|A) = 1
+P(C|A) = 1  
 P(A|C) = P(A)\*P(C|A)/P(C) = **29.4%** chance that Elvis' twin was identical.
 
 ---
@@ -99,7 +99,7 @@ P(A|C) = P(A)\*P(C|A)/P(C) = **29.4%** chance that Elvis' twin was identical.
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I need to learn more about this to give a better response, but, from my understanding, the key difference is in the interpretation of results. A Bayesian result builds off prior knowledge combined with sampling to present a probability statement about a variable. Frequentist statistics only cares about the sampling itself and presents findings in terms of confidence intervals regarding the samplings.
 
 ---
 
